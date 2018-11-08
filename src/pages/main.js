@@ -49,6 +49,8 @@ export default class Main extends Component {
       </TouchableOpacity>
     </View>
   );
+
+  render() {
     return (
       <View style={ styles.container }>
         <Text> Página Main: </Text>
