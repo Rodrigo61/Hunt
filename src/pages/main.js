@@ -38,13 +38,17 @@ export default class Main extends Component {
     <View style={styles.productContainer}>
       <Text style={styles.productTitle}> {item.title} </Text>
       <Text style={styles.productText}> {item.description} </Text>
-      <TouchableOpacity style={styles.productButton} onPress={() => {}}>
+
+      <TouchableOpacity
+        style={styles.productButton}
+        onPress={() => {
+          this.props.navigation.navigate('Products', {product: item});
+        }}
+      >
         <Text style={styles.productButtonText}>Acessar URL</Text>
       </TouchableOpacity>
     </View>
   );
-
-  render() {
     return (
       <View style={ styles.container }>
         <Text> Página Main: </Text>
